@@ -30,7 +30,7 @@ const LoginTeste = () => {
       userEmail:email,
       senha,
       };
-        await axios.post('http://10.0.0.3:5000/login', dados)
+        await axios.post('https://barber-shop-pro.onrender.com/login', dados)
         .then((response) => {
           AsyncStorage.setItem('userData',JSON.stringify(response.data));
 
@@ -292,8 +292,8 @@ const styles = StyleSheet.create({
     backgroundColor: Color.darkgray,
     flex: 1,
     overflow: "hidden",
-    minWidth: 360,
-    minHeight: 800,
+    minWidth: 400,
+    minHeight: 900,
     maxWidth: "100%",
     maxHeight: 800,
     width: "100%",

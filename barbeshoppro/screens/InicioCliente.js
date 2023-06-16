@@ -24,9 +24,9 @@ const InicioCliente = () => {
   useEffect(() => {
     const buscarGeral = async () => {
       try {
-        const response = await axios.get("http://10.0.0.3:5000/buscarGeral");
+        const response = await axios.get("https://barber-shop-pro.onrender.com/buscarGeral");
         console.log(response);
-        const nomesBarbeiros = response.data.map(barbeiro => barbeiro.nome);
+        const nomesBarbeiros = response.data.map(barbeiro => barbeiro.nomeDaBarbearia);
         const tipos = response.data.map(barbeiro => barbeiro.tipo);
         const enderecos = response.data.map(barbeiro => barbeiro.endereco);
         setnomeBarbeiro(nomesBarbeiros);
@@ -43,7 +43,7 @@ const InicioCliente = () => {
 
   const buscarBarbeiros = async () => {
     try {
-      const response = await axios.get("/http://10.0.0.3:5000/inicio");
+      const response = await axios.get("https://barber-shop-pro.onrender.com/inicio");
       setBarbeiros(response.data);
     } catch (error) {
       console.error("Erro ao buscar barbeiros:", error);
@@ -96,7 +96,7 @@ const InicioCliente = () => {
         style={[styles.barbeiroY, styles.barbeiroPosition1]}
         onPress={() => navigation.navigate("Reserva")}
       >
-        <Text style={[styles.barbeiroY1, styles.barbeiroTypo]}>Barbeiro Y</Text>
+        <Text style={[styles.barbeiroY1, styles.barbeiroTypo]}>{nomeBarbeiro[2]}</Text>
       </Pressable>
       <Image
         style={[styles.ellipseIcon, styles.ellipseIconPosition]}
@@ -121,7 +121,7 @@ const InicioCliente = () => {
         style={[styles.barbeiroZ, styles.barbeiroPosition1]}
         onPress={() => navigation.navigate("Reserva")}
       >
-        <Text style={[styles.barbeiroZ1, styles.barbeiroTypo]}>Barbeiro Z</Text>
+        <Text style={[styles.barbeiroZ1, styles.barbeiroTypo]}>{nomeBarbeiro[4]}</Text>
       </Pressable>
       <Image
         style={[styles.inicioClienteChild2, styles.ellipseIconPosition]}
@@ -134,7 +134,7 @@ const InicioCliente = () => {
         source={require("../assets/barbeiro.png")}
       />
       <Text style={[styles.ruaPapaJoo, styles.ruaTypo]}>
-        Rua papa João XXIII, Nº 123 Madalena,50920-000, Recife
+      {endereco[4]}
       </Text>
       <View style={styles.rectangleView} />
       <Text style={styles.barbershoppro}>BarbershopPRO</Text>
@@ -162,7 +162,7 @@ const InicioCliente = () => {
         source={require("../assets/barbeiro.png")}
       />
       <Text style={[styles.ruaPapaJoo1, styles.barbeiroPosition]}>
-        Rua papa João XXIII, Nº 123,50920-000, Recife
+        {endereco[2]}
       </Text>
       <Image
         style={styles.iconSearch}
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
       height: 4,
     },
     textShadowColor: "rgba(0, 0, 0, 0.25)",
-    width: 99,
+    width: 199,
     textAlign: "left",
     color: Color.black,
     fontFamily: FontFamily.interRegular,
@@ -342,7 +342,7 @@ const styles = StyleSheet.create({
   },
   barbeiroY1: {
     
-    height: 35,
+    height: 75,
     textShadowRadius: 4,
     textShadowOffset: {
       width: 0,

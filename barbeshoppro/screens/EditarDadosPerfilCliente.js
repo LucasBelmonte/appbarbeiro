@@ -40,7 +40,7 @@ const ExibirPerfil = ({}) => {
         console.log(updatedProfile);
 
         // Enviar uma solicitação PUT para atualizar os dados do perfil do usuário
-        await axios.put(`http://10.0.0.3:5000/editarCliente/${dados._id}`, updatedProfile);
+        await axios.put(`https://barber-shop-pro.onrender.com/editarCliente/${dados._id}`, updatedProfile);
         setIsLoading(false);
         navigation.goBack(); // Voltar para a tela anterior após a atualização bem-sucedida
       } catch (error) {

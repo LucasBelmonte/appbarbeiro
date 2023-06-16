@@ -216,10 +216,10 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   seuPerfil: {
-    top: 112,
+    top: 122,
     left: 103,
     width: 154,
-    height: 32,
+    height: 52,
     fontFamily: FontFamily.interBold,
     fontWeight: "700",
     fontSize: FontSize.size_11xl,
@@ -366,7 +366,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.darkgray,
     flex: 1,
     overflow: "hidden",
-    height: 800,
+    height: 900,
     width: "100%",
   },
 });

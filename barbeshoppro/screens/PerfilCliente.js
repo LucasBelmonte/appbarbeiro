@@ -7,8 +7,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const PerfilCliente = ({}) => {
   const navigation = useNavigation();
   const [dados,setDados] = useState([]); 
-  const [name,setName] = useState([]); 
-  const [email,setEmail] = useState([]); 
+  const [nomeDaBarbearia, setNomeDaBarbearia] = useState('');
+  const [endereco, setEndereco] = useState('');
+  const [name, setNome] = useState('');
+  const [email, setEmail] = useState('');
+
+
   const [isLoading, setIsLoading] = useState(false);
   
     useEffect(() => {
@@ -74,10 +78,10 @@ const PerfilCliente = ({}) => {
       <View style={styles.rectangleView} />
       <View style={[styles.perfilBarbeiroChild1, styles.perfilChildBg]} />
       <Text style={[styles.barbeiroX, styles.barbeiroXPosition]}>
-        {dados?.nome}
+        {nome}
       </Text>
       <Text style={[styles.ruaPapaJoo, styles.ruaPapaJooTypo]}>
-        {dados?.userEmail}
+        {userEmail}
       </Text>
       <Image
         style={[styles.ellipseIcon, styles.barbeiroXPosition]}
@@ -223,7 +227,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   seuPerfil: {
-    top: 112,
+    top: 122,
     left: 103,
     width: 154,
     height: 40,
@@ -373,7 +377,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.darkgray,
     flex: 1,
     overflow: "hidden",
-    height: 800,
+    height: 900,
     width: "100%",
   },
   inicio: {

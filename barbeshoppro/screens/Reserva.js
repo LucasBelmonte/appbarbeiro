@@ -117,7 +117,10 @@ const Reserva = () => {
         contentFit="cover"
         source={require("../assets/rectangle-44.png")}
       />
-      <Text style={[styles.reservar1, styles.reservar1Position, styles.reservarTypo]}>Reservar</Text>
+       <TouchableOpacity style={[styles.reservar1, styles.reservarTypo1]} onPress={alertas}>
+
+      <Text style={styles.reservarText}>Reservar</Text>
+      </TouchableOpacity>
       <View style={[styles.reservaChild4, styles.reservaChildShadowBox]} />
       <Image
         style={[styles.reservaChild5, styles.reservar2Position]}
@@ -141,11 +144,10 @@ const Reserva = () => {
           </Text>
         </Text>
       </Text>
-      <TouchableOpacity style={[styles.reservar2, styles.reservarTypo]} onPress={alertas}>
+      <TouchableOpacity style={[styles.reservar2, styles.reservarTypo2]} onPress={alertas}>
 
-{/* <Text style={styles.reservarText}>Reservar</Text> */}
-      <Text style={[styles.reservar2, styles.reservar2Position, styles.reservarTypo]}>Reservar</Text>
-</TouchableOpacity>
+      <Text style={styles.reservarText}>Reservar</Text>
+      </TouchableOpacity>
       <Text style={[styles.corteRealizadoNa1, styles.corteTypo]}>
         Corte realizado na maquina
       </Text>
@@ -353,6 +355,64 @@ const styles = StyleSheet.create({
     display: "flex",
     color: Color.black,
   },
+  reservarTypo1: {
+    top: 558,
+    position: "absolute",
+    backgroundColor: Color.darkgray,
+    borderWidth: 1,
+    borderColor: 'black',
+    borderRadius: 5,
+    maxHeight: 23,
+    maxWidth: 87,
+    minHeight: 23,
+    minWidth: 87,
+    width: 87,
+    justifyContent: "center",
+    textAlign: "center",
+    left: 253,
+    fontFamily: FontFamily.interSemibold,
+    fontWeight: "600",
+    height: 23,
+    fontSize: FontSize.size_mini,
+    textShadowRadius: 4,
+    textShadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    textShadowColor: "rgba(0, 0, 0, 0.25)",
+    alignItems: "flex-end",
+    display: "flex",
+    color: Color.black,
+  },
+  reservarTypo2: {
+    backgroundColor: Color.darkgray,
+    borderWidth: 1,
+    borderColor: 'black',
+    borderRadius: 5,
+    maxHeight: 23,
+    maxWidth: 87,
+    minHeight: 23,
+    minWidth: 87,
+    width: 87,
+    justifyContent: "center",
+    textAlign: "center",
+    left: 253,
+    fontFamily: FontFamily.interSemibold,
+    fontWeight: "600",
+    height: 23,
+    fontSize: FontSize.size_mini,
+    textShadowRadius: 4,
+    textShadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    textShadowColor: "rgba(0, 0, 0, 0.25)",
+    alignItems: "flex-end",
+    display: "flex",
+    color: Color.black,
+    top: 661,
+    position: "absolute",
+  },
   corteTypo: {
     width: 208,
     fontFamily: FontFamily.interLight,
@@ -379,6 +439,7 @@ const styles = StyleSheet.create({
   reservar2Position: {
     top: 661,
     position: "absolute",
+    
   },
   reservaChild: {
     top: 30,

@@ -33,14 +33,21 @@ const CadastroBarbeiro1 = () => {
     tipo: 'Barbeiro',
   };
 
-    try {
-      await axios.post('http://10.0.0.3:5000/register',dados)
-      .then((response) => console.log(response))
-      .catch(err => console.error(err?.response?.data?.message));
- 
-    } catch (error) {
-      console.error('Erro ao salvar os campos:', error);
-    }
+  try {
+    await axios.post('https://barber-shop-pro.onrender.com/register', dados)
+    .then((response) => {
+      alert("Cadastro efetuado com sucesso!")
+      navigation.navigate("Login")
+    })
+    .catch(err => {
+      // Do something if the request fails
+      if (err?.response?.data?.message === 'Campos obrigatórios não preenchidos') {
+        console.error('Por favor, preencha todos os campos obrigatórios.');
+      }
+    });
+      } catch (error) {
+    console.error('Erro ao salvar os campos:', error);
+  }
   };
   
 

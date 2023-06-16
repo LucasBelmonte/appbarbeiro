@@ -9,7 +9,7 @@ const router = Router();
 router.post("/registeCliente", ClienteController.registeCliente);
 router.post("/register", UserController.register);
 router.post("/login", SessionController.login);
-router.get("/users/:_id", UserController.buscarDados);
+// router.get("/users/:_id", UserController.buscarDados);
 router.put("/editar/:_id",  UserController.atualizarDadosUsuario);
 router.put("/editarCliente/:_id",  UserController.atualizarDadosUsuarioCliente);
 router.get("/inicio",  UserController.buscarBarbeiro);
