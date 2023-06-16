@@ -205,8 +205,8 @@ const styles = StyleSheet.create({
     minWidth: 360,
     minHeight: 800,
     maxWidth: "100%",
-    maxHeight: 800,
-    width: "100%",
+    maxHeight: 900,
+    width: "100%", 
   },
 });
 

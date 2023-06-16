@@ -9,7 +9,7 @@ const PerfilCliente = ({}) => {
   const [dados,setDados] = useState([]); 
   const [nomeDaBarbearia, setNomeDaBarbearia] = useState('');
   const [endereco, setEndereco] = useState('');
-  const [name, setNome] = useState('');
+  const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
 
 

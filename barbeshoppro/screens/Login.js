@@ -293,9 +293,9 @@ const styles = StyleSheet.create({
     flex: 1,
     overflow: "hidden",
     minWidth: 400,
-    minHeight: 900,
+    minHeight: 1000,
     maxWidth: "100%",
-    maxHeight: 800,
+    maxHeight: 900,
     width: "100%",
   },
 });
